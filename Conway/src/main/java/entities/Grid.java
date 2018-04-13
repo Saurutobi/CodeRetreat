@@ -35,11 +35,11 @@ public class Grid {
             {
                 int countNeighbors = currentArray[i-1][j-1] +
                         currentArray[i][j-1] +
-                        currentArray[i-1][j-1]+
-                        currentArray[i-1][j]+
-                        currentArray[i+1][j]+
-                        currentArray[i+1][j-1]+
-                        currentArray[i+1][j]+
+                        currentArray[i+1][j-1] +
+                        currentArray[i-1][j] +
+                        currentArray[i+1][j] +
+                        currentArray[i+1][j-1] +
+                        currentArray[i+1][j] +
                         currentArray[i+1][j+1];
                 if(countNeighbors < 2)
                 {
@@ -59,5 +59,6 @@ public class Grid {
                 }
             }
         }
+        currentArray = nextArray;
     }
 }
