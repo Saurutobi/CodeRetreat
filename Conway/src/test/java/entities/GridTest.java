@@ -14,14 +14,14 @@ public class GridTest {
 
     @Test
     public void testNoNeighborsDies() {
-        boolean[][] array = grid.getCurrentArray();
-        array[1][1] = true;
+        int[][] array = grid.getCurrentArray();
+        array[1][1] = 1;
         grid.setCurrentArray(array);
 
         grid.iterate();
 
         array = grid.getCurrentArray();
 
-        Assert.assertFalse(array[1][1]);
+        Assert.assertEquals(array[1][1], 0);
     }
 }
